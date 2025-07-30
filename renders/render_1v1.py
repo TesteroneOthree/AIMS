@@ -23,13 +23,14 @@ class Args:
 def _t2n(x):
     return x.detach().cpu().numpy()
 
+
 num_agents = 2
 render = True
-ego_policy_index = 1040
-enm_policy_index = 0
+ego_policy_index = 1031
+enm_policy_index = 444
 episode_rewards = 0
-ego_run_dir = "/home/lqh/jyh/CloseAirCombat/scripts/results/SingleCombat/1v1/NoWeapon/HierarchySelfplay/ppo/artillery_check/wandb/latest-run/files"
-enm_run_dir = "/home/lqh/jyh/CloseAirCombat/scripts/results/SingleCombat/1v1/NoWeapon/HierarchySelfplay/ppo/artillery_check/wandb/latest-run/files"
+ego_run_dir = "/home/mahad/Desktop/FYP/LAG/scripts/results/SingleCombat/1v1/NoWeapon/Selfplay/ppo/v1/wandb/latest-run/files"
+enm_run_dir = "/home/mahad/Desktop/FYP/LAG/scripts/results/SingleCombat/1v1/NoWeapon/Selfplay/ppo/v1/wandb/latest-run/files"
 experiment_name = ego_run_dir.split('/')[-4]
 
 env = SingleCombatEnv("1v1/NoWeapon/Selfplay")
@@ -42,7 +43,6 @@ ego_policy.eval()
 enm_policy.eval()
 ego_policy.load_state_dict(torch.load(ego_run_dir + f"/actor_{ego_policy_index}.pt"))
 enm_policy.load_state_dict(torch.load(enm_run_dir + f"/actor_{enm_policy_index}.pt"))
-
 
 print("Start render")
 obs = env.reset()
