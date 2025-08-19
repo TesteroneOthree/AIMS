@@ -103,14 +103,4 @@ We have added support for real-time telemetry rendering using **Tacview Advanced
 
 This functionality enhances training visualization, making it easier to debug and analyze the agent's performance during the simulation.
 
-## Citing
-If you find this repo useful, pleased use the following citation:
-````
-@misc{liu2022light,
-  author = {Qihan Liu and Yuhua Jiang and Xiaoteng Ma},
-  title = {Light Aircraft Game: A lightweight, scalable, gym-wrapped aircraft competitive environment with baseline reinforcement learning algorithms},
-  year = {2022},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/liuqh16/CloseAirCombat}},
 }
